@@ -74,6 +74,7 @@ TEMPLATES = {
     "kinoilova": {"title": "🎬 Kino Ilova", "engine": "movies", "welcome": "🎬 Kino kodini yuboring!"},
     "provideo": {"title": "🎥 Pro Video Bot", "engine": "movies", "welcome": "🎥 Video kodini yuboring!"},
     "drama": {"title": "🎭 DramaBot", "engine": "movies", "welcome": "🎭 Serial/drama kodini yuboring!"},
+    "anime": {"title": "🎌 Anime bot", "engine": "movies", "welcome": "🎌 Anime kodini yuboring!"},
     "audiopechat": {"title": "🎵 Audio Pechat Bot", "engine": "soon", "welcome": HELLO},
     "yuklovchi": {"title": "⚡ Video va musiqa yuklovchi (yangi)", "engine": "soon", "welcome": HELLO},
     # SMM
@@ -109,7 +110,7 @@ TEMPLATES = {
 }
 
 CATEGORIES = [
-    ("🎬 Media botlar", ["kino", "kinopro", "multfilm", "kinoilova", "provideo", "drama", "audiopechat", "yuklovchi"]),
+    ("🎬 Media botlar", ["kino", "kinopro", "multfilm", "kinoilova", "provideo", "drama", "anime", "audiopechat", "yuklovchi"]),
     ("🚀 SMM botlar", ["smm_xizmat", "smm_murojaat", "smm_post"]),
     ("💰 Moliyaviy botlar", ["fin_narx", "fin_kurs"]),
     ("🛍 Savdo biznes botlar", ["shop_katalog", "shop_buyurtma"]),
