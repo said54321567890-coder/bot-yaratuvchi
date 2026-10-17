@@ -15,7 +15,17 @@ from bson import ObjectId
 from cryptography.fernet import Fernet
 from pymongo import AsyncMongoClient
 
-from anime_bot import count_anime, delete_anime_data, make_anime_dispatcher
+try:
+    from anime_bot import count_anime, delete_anime_data, make_anime_dispatcher
+except ImportError: # anime_bot.py hali yuklanmagan bo'lsa ham bot ishlayveradi
+    async def count_anime(bot_id):
+        return 0
+
+    async def delete_anime_data(bot_id):
+        return None
+
+    def make_anime_dispatcher(bot_id, owner_id):
+        raise RuntimeError("anime_bot.py topilmadi")
 
 logging.basicConfig(level=logging.INFO)
 
