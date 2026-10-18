@@ -761,7 +761,7 @@ def make_builder_dispatcher(scope: str, admin_id: int) -> Dispatcher:
             await safe_edit(cb, plans_text(t["title"], BUILDER_PLANS, True), plans_kb("bp", BUILDER_PLANS))
             await cb.answer()
             return
-        if scope == "root" and key in MEDIA_KEYS:
+        if scope == "root":
             await safe_edit(cb, plans_text(t["title"], MEDIA_PLANS, False), plans_kb(f"mp:{key}", MEDIA_PLANS))
             await cb.answer()
             return
@@ -791,7 +791,7 @@ def make_builder_dispatcher(scope: str, admin_id: int) -> Dispatcher:
         except (ValueError, IndexError):
             await cb.answer()
             return
-        if scope != "root" or key not in MEDIA_KEYS or key not in TEMPLATES:
+        if scope != "root" or key not in TEMPLATES:
             await cb.answer()
             return
         note = f"📦 Tarif: {name} ({speed}x, {PLAN_DAYS} kun)"
