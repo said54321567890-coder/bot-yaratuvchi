@@ -1,5 +1,4 @@
 aiogram>=3.13
-
 pymongo>=4.13
-
 cryptography>=42.0
+httpx
